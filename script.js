@@ -71,7 +71,7 @@ liff.init({
     });
   } else {
     liff.login({
-      redirectUri: "https://dormitory-registration.codemour.repl.co/",
+      redirectUri: "https://rachen2544.github.io/Register-dormitory/",
     });
   }
 });
