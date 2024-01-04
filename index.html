@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ลงทะเบียนหอพัก</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+   <link rel="stylesheet" href="style.css">
+   <script src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script>
+  <script defer src="script.js"></script>
+</head>
+<body>
+<div class="content">
+  <center>
+    <form method="post" action="" name="product" id="product">
+      <div style="display: flex; justify-content: center; align-items: center; height: 100px;">
+        <img src="https://drive.google.com/uc?id=1JhxAqS05f5nVOXdVwDu7LGDgLget-PyE" alt="Image" style="width: 100px; height: 100px;">
+      </div><br></br>
+      <h1>ลงทะเบียนหอพัก</h1><br></br>
+      <div class="image-container">
+        <img src="{LinePictureUrl}" alt="Avatar" class="avatar" id="profilePicture">
+      </div>
+      <h2 id="userName">{Name}</h2>
+      <label for="room">หมายเลขห้อง</label>
+      <select class="fil" name="ห้อง" required>
+        <option value="">เลือกหมายเลขห้อง</option>
+        <option value="ห้อง 101">ห้อง 101</option>
+        <option value="ห้อง 102">ห้อง 102</option>
+        <option value="ห้อง 103">ห้อง 103</option>
+        <option value="ห้อง 104">ห้อง 104</option>
+        <option value="ห้อง 105">ห้อง 105</option>
+        <option value="ห้อง 106">ห้อง 106</option>
+        <option value="ห้อง 107">ห้อง 107</option>
+        <option value="ห้อง 108">ห้อง 108</option>
+        <option value="ห้อง 109">ห้อง 109</option>
+        <option value="ห้อง 110">ห้อง 110</option>
+        <!-- Add more options as needed -->
+      </select>
+
+     
+
+      <label for="name">ชื่อ-นามสกุล</label> <!-- Fixed typo "name" -->
+      <input class="fil" type="text" name="ชื่อ นามสกุล" placeholder="Enter your name" required>
+
+
+      <label for="tel">เบอร์โทร</label>
+      <input class="fil" type="text" name="เบอร์โทร" placeholder="Enter your phone" required pattern="0[0-9]{9}">
+
+      <input type="hidden" id="LineUserId" name="userID">
+      <input type="hidden" id="LineDisplayName" name="displayName">
+      <input type="hidden" id="LinePictureUrl" name="profileImage">
+      <input type="hidden" id="LineStatusMessage" name="statusMessage">
+      <input type="hidden" name="timestamp" id="timestamp" value="">
+      <button class="click" id="submit-button">
+        <span id="submit-text">Submit</span>
+        <i id="loading-icon" class="fa fa-refresh fa-spin"></i>
+
+      </button>
+
+
+      <p style="font-size: 10px; color: rgb(33, 33, 33); margin: 6px;">หอพัก Code มั่ว</p>
+    </form>
+  </center>
+</div>
+  </body>
+</html>
